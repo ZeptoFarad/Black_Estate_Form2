@@ -1,0 +1,25 @@
+/* ---- Imports ---- */
+@font-face {
+  font-family: "Libre Baskerville Regular";
+  src: url("../fonts/LibreBaskerville-Regular.ttf");
+}
+@font-face {
+  font-family: "Libre Basckerville Bold";
+  src: url("../fonts/LibreBaskerville-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: local("../fonts/Roboto-Regular.ttf");
+}
+/* ---- Variables ---- */
+/* ---- Mixins ---- */
+/* --- Insert CSS Under Here -- */
+.grid-container {
+  display: grid;
+}
+.grid-container div {
+  border: pink 2px solid;
+}
+.grid-container section {
+  border: blue 2px solid;
+}/*# sourceMappingURL=style_main.css.map */

@@ -1,0 +1,84 @@
+/* ---- Imports ---- */
+
+@font-face {
+    font-family: "Libre Baskerville Regular";
+    src: url("../fonts/LibreBaskerville-Regular.ttf");
+}
+@font-face{
+    font-family: "Libre Basckerville Bold";
+    src: url("../fonts/LibreBaskerville-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: local("../fonts/Roboto-Regular.ttf");
+}
+
+/* ---- Variables ---- */
+
+
+$color_cream: #F5F1ED;
+$color_magenta: #45040C;
+$header_font:'Libre Baskerville Bold';
+$subheader_font: 'Libre Baskerville Regular'; 
+$body_font: 'Roboto Regular' ;
+
+/* ---- Mixins ---- */
+
+// Comment out Builder Assist When Website Complete
+@mixin builder_assist {
+    div{
+        border: pink 2px solid;
+    }
+    section{
+        border: blue 2px solid;
+    }
+}
+
+@mixin section_headers{
+    h1{
+        font-family: $header_font;
+        font-size: 30px;
+        color: $color_magenta;
+    }
+    p{
+        font-family: $body_font;
+        font-size: 17px;
+        color: $color_magenta;
+    }
+
+}
+
+@mixin shop_section{
+    h1{
+        font-family: $subheader_font;
+        font-size: 24px;
+        color: $color_magenta;
+    }
+    p{
+        font-family: $body_font;
+        font-size: 20px;
+        color: $color_magenta;
+    }
+
+
+    
+}
+
+
+/* --- Insert CSS Under Here -- */
+
+.grid-container{
+    @include builder_assist();
+
+    display: grid;
+    
+    
+
+
+    div{
+
+    }
+}
+
+
