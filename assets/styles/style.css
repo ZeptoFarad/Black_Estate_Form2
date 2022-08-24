@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Libre-Baskerville-Regular";
+  src: url("/assets/fonts/LibreBaskerville-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("/assets/fonts/Roboto-Light.ttf");
+}
+/* Global Css */
+body {
+  background-color: #f5f1ed;
+}
+
+h3 {
+  font-size: clamp(1vh, 1.5em, 1.2em);
+}
+
+nav {
+  padding-bottom: 1.2em;
+}
+nav div:nth-of-type(1) img {
+  height: 100%;
+}
+nav div:nth-of-type(2) {
+  display: flex;
+  align-items: flex-end;
+}
+nav div:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+nav div:nth-of-type(3) .login_button {
+  display: flex;
+  align-items: center;
+  height: 2.4em;
+  max-width: 8em;
+  min-width: 9em;
+  border-radius: 4em;
+  background-color: #45040c;
+  margin-right: 3em;
+}
+nav div:nth-of-type(3) .login_button h3 {
+  color: #f5f1ed;
+  padding: 0;
+  margin: 0;
+}
+nav div {
+  flex: 1;
+  text-align: center;
+  align-items: flex-end;
+}
+nav div h3 {
+  font-family: "Roboto-Light";
+  flex: 1;
+  margin-bottom: 0;
+  color: #45040c;
+}
+
+.hero_image {
+  background-image: url("/assets/images/black_estate_hero.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+.landing {
+  position: relative;
+  color: #f5f1ed;
+  min-height: 90%;
+}
+.landing .landing_text {
+  position: absolute;
+  left: 5em;
+  bottom: 3em;
+  width: min(600px, 60%);
+  border: solid blue 2px;
+  height: max(10vh, 80%);
+}
+.landing .landing_text h1 {
+  font-size: clamp(5rem, 2vw, 15rem);
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+.landing .join_button {
+  display: flex;
+  background-color: #f5f1ed;
+  max-width: 8em;
+  max-height: 2.3em;
+  color: #45040c;
+  padding: 0;
+  margin: 0;
+  border-radius: 4em;
+  border: #45040c 2px solid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex_parent {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .links h3 {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

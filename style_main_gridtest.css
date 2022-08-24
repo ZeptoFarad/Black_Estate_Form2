@@ -77,9 +77,9 @@ nav  h4{
   "padL3 shop shop shop shop shop padR3"
   ;
 }
-/* .grid-content {
+.grid-content {
   background-color: blue;
-} */
+}
 .grid-divider {
   grid-area: divider;
   text-align: center;

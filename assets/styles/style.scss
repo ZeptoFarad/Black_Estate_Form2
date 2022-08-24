@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Libre-Baskerville-Regular";
+  src: url("/assets/fonts/LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("/assets/fonts/Roboto-Light.ttf");
+}
+
+@mixin login_button {
+  height: 2.4em;
+  max-width: 8em;
+  min-width: 9em;
+  border-radius: 4em;
+  background-color: $color_Maroon;
+  margin-right: 3em;
+ 
+}
+
+@mixin join_button {
+  background-color: $color_Cream;
+  max-width: 8em;
+  max-height: 2.3em;
+  color: $color_Maroon;
+  padding: 0;
+  margin: 0;
+  border-radius: 4em;
+  border: $color_Maroon 2px solid;
+  
+}
+
+// $body_Font:  ;
+$main_Font: "Libre-Baskerville-Medium";
+$secondary_Font: "Roboto-Light";
+$color_Maroon: #45040c;
+$color_Cream: #f5f1ed;
+
+/* Global Css */
+body {
+  background-color: $color_Cream;
+}
+
+h3 {
+  font-size: clamp(1vh, 1.5em, 1.2em);
+}
+
+nav {
+  padding-bottom: 1.2em;
+  // Logo
+  div:nth-of-type(1) img {
+    height: 100%;
+  }
+  //Nav Links
+  div:nth-of-type(2) {
+    display: flex;
+    align-items: flex-end;
+  }
+  // Links
+  div:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .login_button {
+      display: flex;
+      align-items: center;
+      @include login_button();
+      h3 {
+        color: $color_Cream;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  div {
+    flex: 1;
+    text-align: center;
+    align-items: flex-end;
+
+    h3 {
+      font-family: $secondary_Font;
+      flex: 1;
+      margin-bottom: 0;
+      color: $color_Maroon;
+    }
+  }
+}
+
+.hero_image {
+  background-image: url("/assets/images/black_estate_hero.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+.landing {
+  position: relative;
+  color: $color_Cream;
+  min-height: 90%;
+  .landing_text {
+    h1 {
+      font-size: clamp(5rem ,2vw , 15rem);
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+    }
+    
+    position: absolute;
+    left: 5em;
+    bottom: 3em;
+    width: min(600px, 60%);
+    border: solid blue 2px;
+    height: max(10vh, 80%);
+  }
+  .join_button {
+    display: flex;
+    @include join_button;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.flex_parent {
+  display: flex;
+}
+
+
+@media (max-width: 768px) {
+    .links h3{
+        display: none;
+    }
+}
