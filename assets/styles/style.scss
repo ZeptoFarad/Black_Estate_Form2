@@ -12,6 +12,10 @@
     src: url("/assets/fonts/Roboto-Light.ttf");
 }
 
+
+// █▀▄▀█ █ ▀▄▀ █ █▄░█ █▀
+// █░▀░█ █ █░█ █ █░▀█ ▄█
+
 @mixin login_button {
   height: 2.4em;
   max-width: 8em;
@@ -24,8 +28,8 @@
 
 @mixin join_button {
   background-color: $color_Cream;
-  max-width: 8em;
-  max-height: 2.3em;
+  width: min(8em,8em);
+  height: min(2.3em,2.3em);
   color: $color_Maroon;
   padding: 0;
   margin: 0;
@@ -34,13 +38,21 @@
   
 }
 
+
+// █░█ ▄▀█ █▀█ █▀
+// ▀▄▀ █▀█ █▀▄ ▄█
+
+
 // $body_Font:  ;
 $main_Font: "Libre-Baskerville-Medium";
 $secondary_Font: "Roboto-Light";
 $color_Maroon: #45040c;
 $color_Cream: #f5f1ed;
 
-/* Global Css */
+
+// █▀▀ █░░ █▀█ █▄▄ ▄▀█ █░░ █▀
+// █▄█ █▄▄ █▄█ █▄█ █▀█ █▄▄ ▄█
+
 body {
   background-color: $color_Cream;
 }
@@ -101,17 +113,20 @@ nav {
   color: $color_Cream;
   min-height: 90%;
   .landing_text {
+    display: flex;
+    flex-direction: column;
     h1 {
-      font-size: clamp(5rem ,2vw , 15rem);
+      font-size: clamp(50px,10vw,5em);
       margin-bottom: 0.5em;
-      margin-top: 0.5em;
+      margin-top: min(0em ,0.5em);
     }
-    
+    p{
+      max-width: 600px;
+    }
     position: absolute;
-    left: 5em;
+    left: calc(2vw + 0.8em);
     bottom: 3em;
-    width: min(600px, 60%);
-    border: solid blue 2px;
+    width: min(800px, 90%);
     height: max(10vh, 80%);
   }
   .join_button {
@@ -126,9 +141,51 @@ nav {
   display: flex;
 }
 
+.flex_parent_column{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: red 2px solid;
+  align-items: center;
+}
+
+
+.page_divider{
+  img{
+  width: min(40em,100%);
+  margin: 0.5em;
+  }
+  h2{
+    margin: 0.5em;
+  }
+}
+
+
+// █▀▄▀█ █▀▀ █▀▄ █ ▄▀█
+// █░▀░█ ██▄ █▄▀ █ █▀█
+
 
 @media (max-width: 768px) {
-    .links h3{
+    .links {
+      h3{
         display: none;
     }
+  }
+  .main_nav div:nth-of-type(3){
+    display: none;
+  }
+  .landing_text{
+    justify-content: center;
+    
+    h1{
+      
+      margin-bottom: 0 !important;
+      padding: 0;
+    }
+    align-items: center;
+    p{
+    text-align: justify;
+    margin-bottom: 32px;
+    }
+  }
 }

@@ -10,7 +10,6 @@
   font-family: "Roboto-Light";
   src: url("/assets/fonts/Roboto-Light.ttf");
 }
-/* Global Css */
 body {
   background-color: #f5f1ed;
 }
@@ -73,23 +72,27 @@ nav div h3 {
   min-height: 90%;
 }
 .landing .landing_text {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  left: 5em;
+  left: calc(2vw + 0.8em);
   bottom: 3em;
-  width: min(600px, 60%);
-  border: solid blue 2px;
+  width: min(800px, 90%);
   height: max(10vh, 80%);
 }
 .landing .landing_text h1 {
-  font-size: clamp(5rem, 2vw, 15rem);
+  font-size: clamp(50px, 10vw, 5em);
   margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-top: 0em;
+}
+.landing .landing_text p {
+  max-width: 600px;
 }
 .landing .join_button {
   display: flex;
   background-color: #f5f1ed;
-  max-width: 8em;
-  max-height: 2.3em;
+  width: 8em;
+  height: 2.3em;
   color: #45040c;
   padding: 0;
   margin: 0;
@@ -104,8 +107,39 @@ nav div h3 {
   display: flex;
 }
 
+.flex_parent_column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: red 2px solid;
+  align-items: center;
+}
+
+.page_divider img {
+  width: min(40em, 100%);
+  margin: 0.5em;
+}
+.page_divider h2 {
+  margin: 0.5em;
+}
+
 @media (max-width: 768px) {
   .links h3 {
     display: none;
+  }
+  .main_nav div:nth-of-type(3) {
+    display: none;
+  }
+  .landing_text {
+    justify-content: center;
+    align-items: center;
+  }
+  .landing_text h1 {
+    margin-bottom: 0 !important;
+    padding: 0;
+  }
+  .landing_text p {
+    text-align: justify;
+    margin-bottom: 32px;
   }
 }/*# sourceMappingURL=style.css.map */
