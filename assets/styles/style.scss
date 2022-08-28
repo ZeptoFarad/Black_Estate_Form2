@@ -60,6 +60,7 @@ nav {
   // Logo
   div:nth-of-type(1) img {
     height: 100%;
+    margin-left: 0.5em;
   }
   //Nav Links
   div:nth-of-type(2) {
@@ -82,6 +83,9 @@ nav {
       }
     }
   }
+  img{
+    height: 30%;
+  }
   div {
     flex: 1;
     text-align: center;
@@ -94,6 +98,10 @@ nav {
       color: $color_Maroon;
     }
   }
+}
+
+#burger{
+  display: none;
 }
 
 .hero_image {
@@ -111,12 +119,12 @@ nav {
     flex-direction: column;
     h1 {
       font-size: clamp(40px, 10vw, 5em);
-      margin-bottom: 0.5em;
-      margin-top: min(0em, 0.5em);
+      margin-bottom: 0.2em;
+      margin-top: min(1em, 0.3em);
     }
     p {
       max-width: 600px;
-      margin: 1em;
+      margin-bottom: min(5em, 8em);
     }
     position: absolute;
     left: calc(2vw + 0.8em);
@@ -134,58 +142,55 @@ nav {
 }
 .flex_parent {
   display: flex;
-  div{
+  div {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .shop{
+  .shop {
     flex-direction: column;
     padding: 0.6em;
-    h3{
+    h3 {
       margin-bottom: 0.5em;
       white-space: nowrap;
     }
   }
-  .img_container img{
+  .img_container img {
     height: 30vh;
   }
 }
 
-.ratings{
+.ratings {
   background-color: $color_Maroon;
   justify-content: center;
   padding-top: 3em;
   padding-bottom: 3em;
   color: $color_Cream;
   text-align: center;
-  .flex_child{
+  .flex_child {
     margin-bottom: 1em;
     max-width: 50%;
   }
-  .img_container{
-    flex:1;
+  .img_container {
+    flex: 1;
     justify-content: space-around;
     padding: 0 30%;
   }
-  div{
-    padding-left: min(25px ,30%);
-    padding-right: min(25px,30%);  
-    
+  div {
+    padding-left: min(25px, 30%);
+    padding-right: min(25px, 30%);
   }
-  div:nth-child(1){
+  div:nth-child(1) {
     margin-bottom: 4em;
   }
 }
 
-
-
-.wrap{
+.wrap {
   flex-wrap: wrap;
 }
 
-.flex_child{
-  flex:1;
+.flex_child {
+  flex: 1;
 }
 
 .flex_parent_column {
@@ -194,7 +199,7 @@ nav {
   text-align: center;
   align-items: center;
 }
-.spacer_div{
+.spacer_div {
   flex-shrink: 2;
 }
 
@@ -213,7 +218,10 @@ nav {
 // █▀▄▀█ █▀▀ █▀▄ █ ▄▀█
 // █░▀░█ ██▄ █▄▀ █ █▀█
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  #burger{
+    display: flex;
+  }
   .links {
     h3 {
       display: none;
@@ -221,6 +229,12 @@ nav {
   }
   .main_nav div:nth-of-type(3) {
     display: none;
+  }
+// Burger menu
+  .main_nav div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
   }
   .landing_text {
     justify-content: center;
@@ -238,7 +252,7 @@ nav {
 }
 
 @media (max-width: 776px) {
-  .spacer_div{
+  .spacer_div {
     display: none !important;
   }
 }
