@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Black Estate</title>
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script defer src="./assets/scripts/burger.js"></script>
   </head>
   <header>
     <nav class="main_nav flex_parent">
@@ -18,15 +19,23 @@
         <h3>Visit</h3>
         <h3>About</h3>
         <h3>Contact</h3>
-        <img id="burger" src="./assets/images/Burger.svg" alt="" srcset="">
+        <img id="burger" src="./assets/images/Burger.svg" alt="" srcset="" />
       </div>
       <div>
         <div class="login_button"><h3>Log In</h3></div>
         <img src="./assets/images/cart_image.svg" alt="" srcset="" />
       </div>
+      
     </nav>
   </header>
   <body>
+    <section id="drop_down" class="hidden">
+      <h3>Home</h3>
+      <h3>Wine</h3>
+      <h3>Visit</h3>
+      <h3>About</h3>
+      <h3>Contact</h3>
+    </section>
     <section class="landing">
       <div class="hero_image"></div>
       <div class="landing_text">
@@ -91,7 +100,10 @@
           provident modi quos. Dolor, amet? Consectetur perspiciatis error
           repudiandae non sunt."
         </h4>
-        <p>-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, similique.</p>
+        <p>
+          -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+          similique.
+        </p>
       </div>
       <div class="flex_child">
         <div class="flex_parent img_container">
@@ -107,17 +119,19 @@
           provident modi quos. Dolor, amet? Consectetur perspiciatis error
           repudiandae non sunt."
         </h4>
-        <p>-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, similique.</p>
+        <p>
+          -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+          similique.
+        </p>
       </div>
     </section>
 
-
-      <section class="page_divider flex_parent_column">
-        <img src="./assets/images/section_decoration.svg" alt="" srcset="" />
-        <h2>Gallery</h2>
-      </section>
-      <section class="gallery_section">
-        <div class="grid_container">
+    <section class="page_divider flex_parent_column">
+      <img src="./assets/images/section_decoration.svg" alt="" srcset="" />
+      <h2>Gallery</h2>
+    </section>
+    <section class="gallery_section">
+      <div class="grid_container">
         <div class="gallery_image grid_item"></div>
         <div class="gallery_image grid_item"></div>
         <div class="gallery_image grid_item"></div>
@@ -125,7 +139,6 @@
         <div class="gallery_image grid_item"></div>
         <div class="gallery_image grid_item"></div>
       </div>
-      </section>
-  
+    </section>
   </body>
 </html>

@@ -83,7 +83,7 @@ nav {
       }
     }
   }
-  img{
+  img {
     height: 30%;
   }
   div {
@@ -100,7 +100,10 @@ nav {
   }
 }
 
-#burger{
+#burger {
+  display: none;
+}
+#drop_down {
   display: none;
 }
 
@@ -219,8 +222,23 @@ nav {
 // █░▀░█ ██▄ █▄▀ █ █▀█
 
 @media (max-width: 1000px) {
-  #burger{
+  #burger {
     display: flex;
+  }
+  .hidden {
+    display: none !important;
+  }
+
+  #drop_down {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    left: 0;
+    background-color: $color_Cream;
+    z-index: 1;
+    padding: 0 1em 1em 1em;
+    width: 98%;
   }
   .links {
     h3 {
@@ -230,7 +248,7 @@ nav {
   .main_nav div:nth-of-type(3) {
     display: none;
   }
-// Burger menu
+  // Burger menu
   .main_nav div:nth-of-type(2) {
     display: flex;
     align-items: center;

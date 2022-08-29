@@ -68,6 +68,10 @@ nav div h3 {
   display: none;
 }
 
+#drop_down {
+  display: none;
+}
+
 .hero_image {
   background-image: url("/assets/images/black_estate_hero.jpg");
   background-size: cover;
@@ -191,6 +195,20 @@ nav div h3 {
 @media (max-width: 1000px) {
   #burger {
     display: flex;
+  }
+  .hidden {
+    display: none !important;
+  }
+  #drop_down {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    left: 0;
+    background-color: #f5f1ed;
+    z-index: 1;
+    padding: 0 1em 1em 1em;
+    width: 98%;
   }
   .links h3 {
     display: none;
