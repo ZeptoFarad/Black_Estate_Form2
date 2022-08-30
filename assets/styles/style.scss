@@ -108,7 +108,12 @@ nav {
 }
 
 .hero_image {
-  background-image: url("/assets/images/black_estate_hero.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7) 5%,
+      rgba(0, 0, 0, 0)
+    ),
+    url("/assets/images/black_estate_hero.jpg");
   background-size: cover;
   height: 60vh;
 }
@@ -217,6 +222,101 @@ nav {
     margin: 0.5em;
   }
 }
+section.inverted_colors {
+  padding: 2em 10%;
+  margin: 0;
+  background-color: $color_Maroon;
+  color: $color_Cream;
+  text-align: center;
+  h2 {
+    white-space: nowrap;
+  }
+  p {
+  }
+  input {
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+
+// █▀▀ ▄▀█ █░░ █░░ █▀▀ █▀█ █▄█
+// █▄█ █▀█ █▄▄ █▄▄ ██▄ █▀▄ ░█░
+
+.gallery_section {
+  align-items: center;
+  justify-content: center;
+  padding: 0 30%;
+  margin-bottom: 8vh;
+  .grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: max(1%, 1em);
+    margin-bottom: max(1%, 1em);
+    grid-template-areas: "gal_image1 gal_image2 gal_image3";
+    .grid_item:nth-of-type(1) {
+      grid-area: gal_image1;
+      background-image: url(/assets/images/square_image.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50%;
+    }
+    .grid_item:nth-of-type(2) {
+      grid-area: gal_image2;
+
+      background-image: url(/assets/images/tall_image.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50%;
+    }
+    .grid_item:nth-of-type(3) {
+      grid-area: gal_image3;
+
+      background-image: url(/assets/images/really_wide_image.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50%;
+    }
+  }
+  .grid_container:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: max(1%, 1em);
+    margin-bottom: max(1%, 1em);
+    grid-template-areas: "gal_image1 gal_image2 gal_image3";
+    .grid_item:nth-of-type(1) {
+      grid-area: gal_image1;
+      background-image: url(/assets/images/black_estate_hero.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50%;
+    }
+    .grid_item:nth-of-type(2) {
+      grid-area: gal_image2;
+
+      background-image: url(/assets/images/Black_estate_logo.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50%;
+    }
+    .grid_item:nth-of-type(3) {
+      grid-area: gal_image3;
+
+      background-image: url(/assets/images/square_image.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 50%;
+    }
+  }
+}
 
 // █▀▄▀█ █▀▀ █▀▄ █ ▄▀█
 // █░▀░█ ██▄ █▄▀ █ █▀█
@@ -228,7 +328,14 @@ nav {
   .hidden {
     display: none !important;
   }
-
+  .hero_image {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 20%,
+        rgba(0, 0, 0, 0)
+      ),
+      url("/assets/images/black_estate_hero.jpg");
+  }
   #drop_down {
     display: flex;
     flex-direction: column;
@@ -265,6 +372,28 @@ nav {
     p {
       text-align: justify;
       margin-bottom: 32px;
+    }
+  }
+
+  .gallery_section {
+    padding: 0.5em;
+    .grid_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "gal_image1 gal_image2";
+    }
+    .grid_item:nth-of-type(3) {
+      display: none;
+    }
+  }
+  .gallery_section .grid_container:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "gal_image1 gal_image2";
+    .grid_item:nth-of-type(3) {
+      display: none;
     }
   }
 }
