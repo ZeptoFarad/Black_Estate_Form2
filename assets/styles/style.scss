@@ -16,12 +16,16 @@
 // █░▀░█ █ █░█ █ █░▀█ ▄█
 
 @mixin login_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 2.4em;
   max-width: 8em;
   min-width: 9em;
   border-radius: 4em;
   background-color: $color_Maroon;
-  margin-right: 3em;
+
+  color: $color_Cream;
 }
 
 @mixin join_button {
@@ -33,6 +37,10 @@
   margin: 0;
   border-radius: 4em;
   border: $color_Maroon 2px solid;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 // █░█ ▄▀█ █▀█ █▀
@@ -55,6 +63,9 @@ h3 {
   font-size: clamp(1vh, 1.5em, 1.2em);
 }
 
+// █░█ █▀▀ ▄▀█ █▀▄ █▀▀ █▀█
+// █▀█ ██▄ █▀█ █▄▀ ██▄ █▀▄
+
 nav {
   padding-bottom: 1.2em;
   // Logo
@@ -73,9 +84,8 @@ nav {
     justify-content: center;
     align-items: flex-end;
     .login_button {
-      display: flex;
-      align-items: center;
       @include login_button();
+      margin-right: 3em;
       h3 {
         color: $color_Cream;
         padding: 0;
@@ -100,6 +110,52 @@ nav {
   }
 }
 
+// █▀▀ █▀█ █▀█ ▀█▀ █▀▀ █▀█
+// █▀░ █▄█ █▄█ ░█░ ██▄ █▀▄
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  background-color: $color_Cream;
+  padding-top: 3em;
+
+  .footer_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    white-space: nowrap;
+
+    ul {
+      margin-left: 6em;
+    }
+  }
+  ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  li {
+    h4 {
+      margin-bottom: 0.5em;
+      margin-top: 0;
+      color: $color_Maroon;
+      font-family: $secondary_Font;
+      font-size: 1.3em;
+    }
+    margin-bottom: 0.2em;
+    font-family: $secondary_Font;
+  }
+}
+.login_button {
+  @include login_button();
+}
+.join_button {
+  @include join_button();
+  margin-bottom: 1em;
+}
+
 #burger {
   display: none;
 }
@@ -115,13 +171,14 @@ nav {
     ),
     url("/assets/images/black_estate_hero.jpg");
   background-size: cover;
-  height: 60vh;
+  height: max(60vh, 360px);
 }
 
 .landing {
   position: relative;
   color: $color_Cream;
-  min-height: 90%;
+  max-height: 60vh;
+  min-height: 360px;
   .landing_text {
     display: flex;
     flex-direction: column;
@@ -132,7 +189,7 @@ nav {
     }
     p {
       max-width: 600px;
-      margin-bottom: min(5em, 8em);
+      margin-bottom: 2vh;
     }
     position: absolute;
     left: calc(2vw + 0.8em);
@@ -141,11 +198,7 @@ nav {
     height: max(10vh, 80%);
   }
   .join_button {
-    display: flex;
     @include join_button;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
   }
 }
 .flex_parent {
@@ -222,21 +275,44 @@ nav {
     margin: 0.5em;
   }
 }
+
 section.inverted_colors {
   padding: 2em 10%;
   margin: 0;
   background-color: $color_Maroon;
   color: $color_Cream;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  .input_div {
+    margin-top: 3em;
+    flex-direction: row;
+  }
+  div {
+    margin: 2%;
+  }
   h2 {
     white-space: nowrap;
+    font-size: 2.5em;
   }
   p {
+    width: 60%;
+    font-family: $secondary_Font;
+    font-size: large;
   }
   input {
-    height: 30px;
+    height: 2.3em;
+    width: 250px;
     border-radius: 20px;
     text-align: center;
+    margin-right: 3em;
+    font-family: $secondary_Font;
+    font-weight: bold;
+    margin-bottom: 0 !important;
+  }
+  .submit_button {
+    @include join_button();
   }
 }
 
@@ -396,10 +472,41 @@ section.inverted_colors {
       display: none;
     }
   }
+
+  section.inverted_colors input {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+
+  section.inverted_colors {
+    h2 {
+      white-space: unset;
+      font-size: 2.5em;
+    }
+  }
 }
 
 @media (max-width: 776px) {
   .spacer_div {
     display: none !important;
+  }
+  .input_div {
+    flex-direction: column !important;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    div {
+      margin-bottom: 2em;
+    }
+    .footer_links {
+      display: none;
+    }
+  }
+  .landing_text {
+    text-align: center;
+    p {
+      text-align: center;
+    }
   }
 }
